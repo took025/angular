@@ -1,6 +1,6 @@
 <section class="log__in__section d-flex justify-content-center align-items-center">
     <div class="d-flex justify-content-center align-items-center">
-        <form class="login__form p-4" [formGroup]="loginForm">
+        <form class="login__form p-4" [formGroup]="loginForm" (ngSubmit)="formSubmit(loginForm)">
             <div class="mb-4 mt-3">
                 <img class="w-75 mx-auto d-block" src="../../../../assets/images/instagram-new.jpg" alt="">
             </div>
@@ -14,7 +14,7 @@
                 </div>
 
                 <div class="mb-3">
-                    <button  (click)="formSubmit(loginForm)" class="base__button w-100">Log
+                    <button  class="base__button w-100">Log
                         In</button>
                 </div>
             </div>
