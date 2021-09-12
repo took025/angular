@@ -1,1 +1,63 @@
 /* You can add global styles to this file, and also import other style files */
+$white: #fff;
+$black: #000;
+$blue: #5eacde;
+$lignt-gray: #fafafa;
+$border: #ebebeb;
+.log__in__section {
+    background-color: $lignt-gray;
+    .login__form {
+        background-color: $white;
+        border: 1px solid $border;
+        max-width: 300px;
+    }
+}
+.base__button {
+    height: 30px;
+    border: none;
+    color: $white;
+    background-color: $blue;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &:disabled {
+        background-color: #b2dffc;
+    }
+}
+.base__input {
+    height: 35px;
+    background-color: $lignt-gray;
+    border: 1px solid $border;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 14px;
+    font-size: 14px;
+}
+
+* {
+    font-family: Roboto, "Helvetica Neue", sans-serif !important;
+}
+section {
+    min-height: 100vh;
+}
+.container {
+    padding-top: 70px;
+}
+.header {
+    border-bottom: 1px solid $black;
+    height: 70px;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 120;
+    background-color: $white;
+    img {
+        width: 140px;
+    }
+}
+.text-danger {
+    font-size: 12px;
+}

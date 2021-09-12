@@ -1,0 +1,35 @@
+<section class="log__in__section d-flex justify-content-center align-items-center">
+    <div class="d-flex justify-content-center align-items-center">
+        <form class="login__form p-4" [formGroup]="loginForm">
+            <div class="mb-4 mt-3">
+                <img class="w-75 mx-auto d-block" src="../../../../assets/images/instagram-new.jpg" alt="">
+            </div>
+            <div class="login">
+                <div class="mb-3">
+                    <input autofocus formControlName="user" placeholder="Phone umber, username , or email"
+                        class="base__input w-100" type="text" autocomplete>
+                </div>
+                <div class="mb-3">
+                    <input formControlName="password" placeholder="Password" class="base__input w-100" type="password" autocomplete>
+                </div>
+
+                <div class="mb-3">
+                    <button  (click)="formSubmit(loginForm)" class="base__button w-100">Log
+                        In</button>
+                </div>
+            </div>
+            <div class="validators">
+                <span *ngIf="loginForm.controls.user.errors?.minlength && loginForm.controls.user.touched"
+                    class="text-danger d-block mb-2">username must contain at least 4 letter</span>
+                <span *ngIf="loginForm.controls.user.errors?.maxlength && loginForm.controls.user.touched"
+                    class="text-danger d-block mb-2">username must contain max 12 letter</span>
+                <span *ngIf="loginForm.controls.password.errors?.noNumber && loginForm.controls.password.touched"
+                    class="text-danger d-block mb-2">password must contain at least 1 number</span>
+                <span *ngIf="loginForm.controls.password.errors?.noUppercase && loginForm.controls.password.touched"
+                    class="text-danger d-block mb-2">password must contain uppercase latter</span>
+                <span *ngIf="loginForm.controls.password.errors?.noLowercase && loginForm.controls.password.touched"
+                    class="text-danger d-block mb-2">password must contain lowercase latter</span>
+            </div>
+        </form>
+    </div>
+</section>
